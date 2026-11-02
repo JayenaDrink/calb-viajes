@@ -67,7 +67,7 @@ window.VIAJE = {
     {
       fecha: "2026-11-24",
       titulo:  { nl: "Habsburgs Madrid en de kerstmarkt", es: "Madrid de los Austrias y mercado navideño" },
-      resumen: { nl: "Historische hoekjes, kloosterkoekjes, Doña Manolita, de kerstmarkt aan het Bernabéu en een wijnproeverij.", es: "Rincones históricos, dulces de convento, Doña Manolita, mercado navideño del Bernabéu y cata de vino." },
+      resumen: { nl: "Historische hoekjes, kloosterkoekjes, Doña Manolita, een kerstmarkt en een wijnproeverij aan het Bernabéu.", es: "Rincones históricos, dulces de convento, Doña Manolita, mercado navideño y cata de vino en el Bernabéu." },
       foto: WM + "c/c7/Plaza_de_la_Villa_%28Madrid%29_07.jpg/1280px-Plaza_de_la_Villa_%28Madrid%29_07.jpg",
       actividades: [
         { hora: "09:30", tipo: "metro", titulo: { nl: "Vertrek uit het hotel", es: "Salida del hotel" }, detalle: { nl: "Metro lijn 5 van Puerta de Toledo naar Ópera, of wandelen naar het Madrid van de Habsburgers", es: "Metro L5 de Puerta de Toledo a Ópera, o paseo hacia el Madrid de los Austrias" } },
@@ -79,8 +79,8 @@ window.VIAJE = {
         { hora: "13:30", tipo: "comida", titulo: { nl: "Canarisch middagmaal in Detenderete", es: "Almuerzo canario en Detenderete" }, detalle: "Calle de Santa Cruz de Marcenado" },
         { hora: "15:00", tipo: "libre", titulo: { nl: "Rust in het hotel", es: "Descanso en el hotel" }, detalle: { nl: "Tot 17:00", es: "Hasta las 17:00" } },
         { hora: "17:00", tipo: "metro", titulo: { nl: "Vertrek naar het noorden van de stad", es: "Salida hacia la zona norte" }, detalle: { nl: "Metro richting Nuevos Ministerios / Bernabéu", es: "Metro hacia Nuevos Ministerios / Bernabéu" } },
-        { hora: "17:45", tipo: "visita", titulo: { nl: "Kerstmarkt aan het Bernabéu", es: "Mercado Navideño del Bernabéu" }, detalle: { nl: "Attracties, kraampjes en verlichting tot 19:15", es: "Atracciones, casetas e iluminación hasta las 19:15" } },
-        { hora: "19:15", tipo: "actividad", titulo: { nl: "Wijnproeverij voor de groep", es: "Cata de vino para el grupo" }, detalle: { nl: "Begeleide proeverij in een gereserveerde ruimte, tot 20:30", es: "Degustación guiada en un espacio reservado, hasta las 20:30" } },
+        { hora: "17:45", tipo: "visita", titulo: { nl: "Wandeling over de kerstmarkt", es: "Paseo por el Mercado Navideño" }, detalle: { nl: "Attracties, kraampjes en verlichting tot 19:15", es: "Atracciones, casetas e iluminación hasta las 19:15" } },
+        { hora: "19:15", tipo: "actividad", titulo: { nl: "Wijnproeverij voor de groep aan het Bernabéu", es: "Cata de vino para el grupo en el Bernabéu" }, detalle: { nl: "Begeleide proeverij in een gereserveerde ruimte, tot 20:30", es: "Degustación guiada en un espacio reservado, hasta las 20:30" } },
         { hora: "20:45", tipo: "comida", titulo: { nl: "Diner in Bar Mistela Chamartín", es: "Cena en Bar Mistela Chamartín" } }
       ]
     },
@@ -107,7 +107,7 @@ window.VIAJE = {
     [{ nl: "Neptunusfontein", es: "Fuente de Neptuno" }, 40.4154, -3.6942],
     ["Plaza de la Villa", 40.4153, -3.7101],
     ["Doña Manolita · Calle del Carmen", 40.4182, -3.7040],
-    [{ nl: "Kerstmarkt · Bernabéu", es: "Mercado Navideño · Bernabéu" }, 40.4531, -3.6883],
+    [{ nl: "Wijnproeverij · Bernabéu", es: "Cata de vino · Bernabéu" }, 40.4531, -3.6883],
     ["Mercado de San Fernando · Lavapiés", 40.4087, -3.7024],
     [{ nl: "Station Chamartín", es: "Estación de Chamartín" }, 40.4722, -3.6825]
   ]
