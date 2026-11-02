@@ -128,8 +128,9 @@ function go(i, scroll){
   current = i;
   document.querySelectorAll(".tab").forEach(b=>b.classList.toggle("on", String(b.dataset.i)===String(i)));
   document.querySelectorAll(".day").forEach((el,k)=>el.classList.toggle("on", i==="all" || k===i));
-  const tab = document.querySelector(`.tab[data-i="${i}"]`);
-  if (tab) tab.scrollIntoView({behavior:"smooth", inline:"center", block:"nearest"});
+  // centrar la pestaña activa moviendo solo la fila de pestañas (sin desplazar la página)
+  const tab = document.querySelector(`.tab[data-i="${i}"]`), bar = $("tabs");
+  if (tab && bar) bar.scrollTo({left: tab.offsetLeft - (bar.clientWidth - tab.offsetWidth)/2, behavior: scroll ? "smooth" : "auto"});
   if (scroll) $("programa").scrollIntoView({behavior:"smooth"});
 }
 
