@@ -1,115 +1,114 @@
 /* =========================================================
-   DATOS DEL VIAJE
-   Para un viaje nuevo, solo hay que cambiar este archivo.
-   - Las fechas van en formato AAAA-MM-DD.
-   - "foto" es opcional: la dirección (URL) de una imagen.
-   - "tipo" de actividad: encuentro, bus, tren, metro, taxi,
-     visita, compras, comida, actividad, libre, hotel, vuelta.
-   - Si un campo no se usa, se puede dejar vacío ("").
+   DATOS DEL VIAJE / REISGEGEVENS
+   Cada texto puede ir en los dos idiomas: { nl: "...", es: "..." }
+   Elk tekstveld kan in twee talen: { nl: "...", es: "..." }
+   - Fechas / data: AAAA-MM-DD
+   - tipo: encuentro, bus, tren, metro, taxi, visita, compras,
+           comida, actividad, libre, hotel, vuelta
    ========================================================= */
 const WM = "https://thumb.wikimedia.org/wikipedia/commons/thumb/";
 
 window.VIAJE = {
   ejemplo: false,
 
-  titulo: "Madrid en Navidad",
-  subtitulo: "Viaje de socios · Calpe – Madrid",
+  titulo:    { nl: "Madrid in kerstsfeer", es: "Madrid en Navidad" },
+  subtitulo: { nl: "Ledenreis · Calpe – Madrid", es: "Viaje de socios · Calpe – Madrid" },
   destino: "Madrid",
   inicio: "2026-11-23",
   fin: "2026-11-25",
   portada: WM + "5/58/Palacio_de_Comunicaciones_-_46.jpg/1280px-Palacio_de_Comunicaciones_-_46.jpg",
 
   encuentro: {
-    lugar: "Calpe, salida hacia la estación de Alicante",
+    lugar: { nl: "Calpe, vertrek naar het station van Alicante", es: "Calpe, salida hacia la estación de Alicante" },
     hora: "07:40",
-    nota: "Tren a Madrid a las 09:40 desde Alicante."
+    nota:  { nl: "Trein naar Madrid om 09:40 vanuit Alicante.", es: "Tren a Madrid a las 09:40 desde Alicante." }
   },
-  regreso: "Miércoles 25 · tren de vuelta a las 16:00 desde Madrid-Chamartín",
+  regreso: { nl: "Woensdag 25 · trein terug om 16:00 vanuit Madrid-Chamartín", es: "Miércoles 25 · tren de vuelta a las 16:00 desde Madrid-Chamartín" },
   organiza: "Amistades Belgas de Levante",
   contacto: "",
   precio: "",
 
   llevar: [
-    "DNI y billetes de tren",
-    "Abrigo y bufanda: en Madrid hace frío por la noche",
-    "Calzado cómodo para pasear",
-    "Tarjeta o algo de efectivo para compras",
-    "Medicación personal"
+    { nl: "Identiteitskaart en treinkaartjes", es: "DNI y billetes de tren" },
+    { nl: "Jas en sjaal: 's avonds is het koud in Madrid", es: "Abrigo y bufanda: en Madrid hace frío por la noche" },
+    { nl: "Comfortabele schoenen om te wandelen", es: "Calzado cómodo para pasear" },
+    { nl: "Bankkaart of wat cash voor aankopen", es: "Tarjeta o algo de efectivo para compras" },
+    { nl: "Persoonlijke medicatie", es: "Medicación personal" }
   ],
 
   alojamiento: {
     nombre: "Hotel Puerta de Toledo",
-    zona: "Glorieta de Puerta de Toledo · metro Puerta de Toledo (L5)",
-    nota: "Dos noches, del lunes 23 al miércoles 25."
+    zona: { nl: "Glorieta de Puerta de Toledo · metro Puerta de Toledo (lijn 5)", es: "Glorieta de Puerta de Toledo · metro Puerta de Toledo (L5)" },
+    nota: { nl: "Twee nachten, van maandag 23 tot woensdag 25.", es: "Dos noches, del lunes 23 al miércoles 25." }
   },
 
   dias: [
     {
       fecha: "2026-11-23",
-      titulo: "Llegada y luces de Navidad",
-      resumen: "Tren a Madrid, bienvenida en el hotel y paseo en tuc-tuc por la iluminación navideña.",
+      titulo:  { nl: "Aankomst en kerstverlichting", es: "Llegada y luces de Navidad" },
+      resumen: { nl: "Trein naar Madrid, welkom in het hotel en een tuktukrit langs de kerstverlichting.", es: "Tren a Madrid, bienvenida en el hotel y paseo en tuc-tuc por la iluminación navideña." },
       foto: "https://upload.wikimedia.org/wikipedia/commons/0/09/Fuente_de_Neptuno_%28Madrid%29_06.jpg",
       actividades: [
-        { hora: "07:40", tipo: "encuentro", titulo: "Salida desde Calpe hacia Alicante", detalle: "" },
-        { hora: "08:30", tipo: "comida", titulo: "Llegada a la estación de Alicante y desayuno", detalle: "" },
-        { hora: "09:40", tipo: "tren", titulo: "Salida del tren a Madrid", detalle: "" },
-        { hora: "12:08", tipo: "taxi", titulo: "Llegada a Madrid-Chamartín", detalle: "Traslado en taxis al hotel" },
-        { hora: "13:00", tipo: "hotel", titulo: "Check-in en el Hotel Puerta de Toledo", detalle: "" },
-        { hora: "13:15", tipo: "actividad", titulo: "Aperitivo de bienvenida", detalle: "" },
-        { hora: "14:00", tipo: "comida", titulo: "Almuerzo en Makkila Toledo", detalle: "" },
-        { hora: "15:15", tipo: "libre", titulo: "Tiempo libre en el hotel", detalle: "" },
-        { hora: "17:00", tipo: "metro", titulo: "Metro al centro y merienda en Chocolat Madrid", detalle: "" },
-        { hora: "18:40", tipo: "visita", titulo: "Breve paseo hacia la Fuente de Neptuno", detalle: "" },
-        { hora: "19:00", tipo: "actividad", titulo: "Paseo en tuc-tuc por la iluminación navideña", detalle: "" },
-        { hora: "20:30", tipo: "comida", titulo: "Cena del grupo en Ocafú Prado", detalle: "Taberna gallega" },
-        { hora: "", tipo: "hotel", titulo: "Vuelta al hotel", detalle: "" }
+        { hora: "07:40", tipo: "encuentro", titulo: { nl: "Vertrek uit Calpe naar Alicante", es: "Salida desde Calpe hacia Alicante" } },
+        { hora: "08:30", tipo: "comida", titulo: { nl: "Aankomst in het station van Alicante en ontbijt", es: "Llegada a la estación de Alicante y desayuno" } },
+        { hora: "09:40", tipo: "tren", titulo: { nl: "Vertrek van de trein naar Madrid", es: "Salida del tren a Madrid" } },
+        { hora: "12:08", tipo: "taxi", titulo: { nl: "Aankomst in Madrid-Chamartín", es: "Llegada a Madrid-Chamartín" }, detalle: { nl: "Met de taxi naar het hotel", es: "Traslado en taxis al hotel" } },
+        { hora: "13:00", tipo: "hotel", titulo: { nl: "Inchecken in Hotel Puerta de Toledo", es: "Check-in en el Hotel Puerta de Toledo" } },
+        { hora: "13:15", tipo: "actividad", titulo: { nl: "Welkomstaperitief", es: "Aperitivo de bienvenida" } },
+        { hora: "14:00", tipo: "comida", titulo: { nl: "Middagmaal in Makkila Toledo", es: "Almuerzo en Makkila Toledo" } },
+        { hora: "15:15", tipo: "libre", titulo: { nl: "Vrije tijd in het hotel", es: "Tiempo libre en el hotel" } },
+        { hora: "17:00", tipo: "metro", titulo: { nl: "Met de metro naar het centrum, vieruurtje bij Chocolat Madrid", es: "Metro al centro y merienda en Chocolat Madrid" } },
+        { hora: "18:40", tipo: "visita", titulo: { nl: "Korte wandeling naar de Neptunusfontein", es: "Breve paseo hacia la Fuente de Neptuno" } },
+        { hora: "19:00", tipo: "actividad", titulo: { nl: "Tuktukrit langs de kerstverlichting", es: "Paseo en tuc-tuc por la iluminación navideña" } },
+        { hora: "20:30", tipo: "comida", titulo: { nl: "Groepsdiner in Ocafú Prado", es: "Cena del grupo en Ocafú Prado" }, detalle: { nl: "Galicische taverne", es: "Taberna gallega" } },
+        { hora: "", tipo: "hotel", titulo: { nl: "Terug naar het hotel", es: "Vuelta al hotel" } }
       ]
     },
     {
       fecha: "2026-11-24",
-      titulo: "Madrid de los Austrias y mercado navideño",
-      resumen: "Rincones históricos, dulces de convento, Doña Manolita, mercado navideño del Bernabéu y cata de vino.",
+      titulo:  { nl: "Habsburgs Madrid en de kerstmarkt", es: "Madrid de los Austrias y mercado navideño" },
+      resumen: { nl: "Historische hoekjes, kloosterkoekjes, Doña Manolita, de kerstmarkt aan het Bernabéu en een wijnproeverij.", es: "Rincones históricos, dulces de convento, Doña Manolita, mercado navideño del Bernabéu y cata de vino." },
       foto: WM + "c/c7/Plaza_de_la_Villa_%28Madrid%29_07.jpg/1280px-Plaza_de_la_Villa_%28Madrid%29_07.jpg",
       actividades: [
-        { hora: "09:30", tipo: "metro", titulo: "Salida del hotel", detalle: "Metro L5 de Puerta de Toledo a Ópera, o paseo hacia el Madrid de los Austrias" },
-        { hora: "09:45", tipo: "visita", titulo: "Plaza de la Villa y Calle del Codo", detalle: "Recorrido a pie por el conjunto histórico medieval" },
-        { hora: "10:15", tipo: "visita", titulo: "Monasterio del Corpus Christi, «Las Carboneras»", detalle: "Iglesia conventual y compra de galletas y dulces en el torno" },
-        { hora: "11:00", tipo: "compras", titulo: "La Tienda de los Deseos", detalle: "Calle de la Escalinata, a 3 minutos a pie del convento" },
-        { hora: "11:45", tipo: "compras", titulo: "Calle del Arenal y Doña Manolita", detalle: "Parada en Turrones Vicens y lotería en Doña Manolita (calle del Carmen)" },
-        { hora: "13:00", tipo: "metro", titulo: "Metro hacia el almuerzo", detalle: "L2 de Sol o Gran Vía a San Bernardo, para no caminar mucho" },
-        { hora: "13:30", tipo: "comida", titulo: "Almuerzo canario en Detenderete", detalle: "Calle de Santa Cruz de Marcenado" },
-        { hora: "15:00", tipo: "libre", titulo: "Descanso en el hotel", detalle: "Hasta las 17:00" },
-        { hora: "17:00", tipo: "metro", titulo: "Salida hacia la zona norte", detalle: "Metro hacia Nuevos Ministerios / Bernabéu" },
-        { hora: "17:45", tipo: "visita", titulo: "Mercado Navideño del Bernabéu", detalle: "Atracciones, casetas e iluminación hasta las 19:15" },
-        { hora: "19:15", tipo: "actividad", titulo: "Cata de vino para el grupo", detalle: "Degustación guiada en un espacio reservado, hasta las 20:30" },
-        { hora: "20:45", tipo: "comida", titulo: "Cena en Bar Mistela Chamartín", detalle: "" }
+        { hora: "09:30", tipo: "metro", titulo: { nl: "Vertrek uit het hotel", es: "Salida del hotel" }, detalle: { nl: "Metro lijn 5 van Puerta de Toledo naar Ópera, of wandelen naar het Madrid van de Habsburgers", es: "Metro L5 de Puerta de Toledo a Ópera, o paseo hacia el Madrid de los Austrias" } },
+        { hora: "09:45", tipo: "visita", titulo: { nl: "Plaza de la Villa en Calle del Codo", es: "Plaza de la Villa y Calle del Codo" }, detalle: { nl: "Wandeling door het middeleeuwse historische centrum", es: "Recorrido a pie por el conjunto histórico medieval" } },
+        { hora: "10:15", tipo: "visita", titulo: { nl: "Klooster Corpus Christi, «Las Carboneras»", es: "Monasterio del Corpus Christi, «Las Carboneras»" }, detalle: { nl: "Kloosterkerk, en koekjes en zoetigheden kopen aan het draailuik", es: "Iglesia conventual y compra de galletas y dulces en el torno" } },
+        { hora: "11:00", tipo: "compras", titulo: "La Tienda de los Deseos", detalle: { nl: "Calle de la Escalinata, 3 minuten wandelen van het klooster", es: "Calle de la Escalinata, a 3 minutos a pie del convento" } },
+        { hora: "11:45", tipo: "compras", titulo: { nl: "Calle del Arenal en Doña Manolita", es: "Calle del Arenal y Doña Manolita" }, detalle: { nl: "Stop bij Turrones Vicens en loterij bij Doña Manolita (calle del Carmen)", es: "Parada en Turrones Vicens y lotería en Doña Manolita (calle del Carmen)" } },
+        { hora: "13:00", tipo: "metro", titulo: { nl: "Met de metro naar het middagmaal", es: "Metro hacia el almuerzo" }, detalle: { nl: "Lijn 2 van Sol of Gran Vía naar San Bernardo, om niet te veel te wandelen", es: "L2 de Sol o Gran Vía a San Bernardo, para no caminar mucho" } },
+        { hora: "13:30", tipo: "comida", titulo: { nl: "Canarisch middagmaal in Detenderete", es: "Almuerzo canario en Detenderete" }, detalle: "Calle de Santa Cruz de Marcenado" },
+        { hora: "15:00", tipo: "libre", titulo: { nl: "Rust in het hotel", es: "Descanso en el hotel" }, detalle: { nl: "Tot 17:00", es: "Hasta las 17:00" } },
+        { hora: "17:00", tipo: "metro", titulo: { nl: "Vertrek naar het noorden van de stad", es: "Salida hacia la zona norte" }, detalle: { nl: "Metro richting Nuevos Ministerios / Bernabéu", es: "Metro hacia Nuevos Ministerios / Bernabéu" } },
+        { hora: "17:45", tipo: "visita", titulo: { nl: "Kerstmarkt aan het Bernabéu", es: "Mercado Navideño del Bernabéu" }, detalle: { nl: "Attracties, kraampjes en verlichting tot 19:15", es: "Atracciones, casetas e iluminación hasta las 19:15" } },
+        { hora: "19:15", tipo: "actividad", titulo: { nl: "Wijnproeverij voor de groep", es: "Cata de vino para el grupo" }, detalle: { nl: "Begeleide proeverij in een gereserveerde ruimte, tot 20:30", es: "Degustación guiada en un espacio reservado, hasta las 20:30" } },
+        { hora: "20:45", tipo: "comida", titulo: { nl: "Diner in Bar Mistela Chamartín", es: "Cena en Bar Mistela Chamartín" } }
       ]
     },
     {
       fecha: "2026-11-25",
-      titulo: "Lavapiés y vuelta a casa",
-      resumen: "Mercado de San Fernando, cata de cerveza artesana, comida castiza y tren de regreso.",
+      titulo:  { nl: "Lavapiés en terug naar huis", es: "Lavapiés y vuelta a casa" },
+      resumen: { nl: "Mercado de San Fernando, proeverij van ambachtelijk bier, een traditioneel middagmaal en de trein terug.", es: "Mercado de San Fernando, cata de cerveza artesana, comida castiza y tren de regreso." },
       foto: WM + "8/8d/Mercado_de_San_Fernando_%28Madrid%29_02.jpg/1280px-Mercado_de_San_Fernando_%28Madrid%29_02.jpg",
       actividades: [
-        { hora: "09:30", tipo: "hotel", titulo: "Check-out", detalle: "Las maletas se quedan en la recepción del hotel" },
-        { hora: "10:00", tipo: "visita", titulo: "Paseo hacia el Mercado de San Fernando", detalle: "En Lavapiés" },
-        { hora: "11:00", tipo: "actividad", titulo: "Cata de cerveza artesana", detalle: "En el mismo mercado, hasta las 12:00" },
-        { hora: "12:00", tipo: "comida", titulo: "Almuerzo en la Taberna El Madroño", detalle: "Zona de Puerta Cerrada, hasta las 14:00" },
-        { hora: "14:00", tipo: "hotel", titulo: "Café en el hotel y recogida de maletas", detalle: "" },
-        { hora: "14:45", tipo: "taxi", titulo: "Taxi a la estación de Chamartín", detalle: "" },
-        { hora: "16:00", tipo: "vuelta", titulo: "Tren de regreso a casa", detalle: "" }
+        { hora: "09:30", tipo: "hotel", titulo: { nl: "Uitchecken", es: "Check-out" }, detalle: { nl: "De koffers blijven aan de receptie van het hotel", es: "Las maletas se quedan en la recepción del hotel" } },
+        { hora: "10:00", tipo: "visita", titulo: { nl: "Wandeling naar de Mercado de San Fernando", es: "Paseo hacia el Mercado de San Fernando" }, detalle: { nl: "In Lavapiés", es: "En Lavapiés" } },
+        { hora: "11:00", tipo: "actividad", titulo: { nl: "Proeverij van ambachtelijk bier", es: "Cata de cerveza artesana" }, detalle: { nl: "In dezelfde markt, tot 12:00", es: "En el mismo mercado, hasta las 12:00" } },
+        { hora: "12:00", tipo: "comida", titulo: { nl: "Middagmaal in Taberna El Madroño", es: "Almuerzo en la Taberna El Madroño" }, detalle: { nl: "Buurt van Puerta Cerrada, tot 14:00", es: "Zona de Puerta Cerrada, hasta las 14:00" } },
+        { hora: "14:00", tipo: "hotel", titulo: { nl: "Koffie in het hotel en koffers ophalen", es: "Café en el hotel y recogida de maletas" } },
+        { hora: "14:45", tipo: "taxi", titulo: { nl: "Taxi naar het station van Chamartín", es: "Taxi a la estación de Chamartín" } },
+        { hora: "16:00", tipo: "vuelta", titulo: { nl: "Trein terug naar huis", es: "Tren de regreso a casa" } }
       ]
     }
   ],
 
-  // Puntos del mapa [nombre, latitud, longitud]
+  // Kaart / mapa: [naam, breedte, lengte]
   mapa: [
     ["Hotel Puerta de Toledo", 40.4066, -3.7114],
-    ["Fuente de Neptuno", 40.4154, -3.6942],
+    [{ nl: "Neptunusfontein", es: "Fuente de Neptuno" }, 40.4154, -3.6942],
     ["Plaza de la Villa", 40.4153, -3.7101],
     ["Doña Manolita · Calle del Carmen", 40.4182, -3.7040],
-    ["Mercado Navideño · Bernabéu", 40.4531, -3.6883],
+    [{ nl: "Kerstmarkt · Bernabéu", es: "Mercado Navideño · Bernabéu" }, 40.4531, -3.6883],
     ["Mercado de San Fernando · Lavapiés", 40.4087, -3.7024],
-    ["Estación de Chamartín", 40.4722, -3.6825]
+    [{ nl: "Station Chamartín", es: "Estación de Chamartín" }, 40.4722, -3.6825]
   ]
 };
